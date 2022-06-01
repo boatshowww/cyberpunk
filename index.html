@@ -52,6 +52,15 @@
         font-weight: bold;
         padding-left: 400px;
       }
+      #welcome {
+        position: relative;
+        max-width: 700px;
+        float: right;
+        padding-right: 200px;
+        padding-left: 50px;
+        font-size: 80px;
+        font-weight: bold;
+      }
     </style>
     <script>
     function getCookieValue(name) {
@@ -89,6 +98,9 @@
       }
       if (getCookieValue("empCookie") != "") {
         document.getElementById("empDisplay").innerHTML = "EMP = " + getCookieValue("empCookie");
+      }
+      if (getCookieValue("nameCookie") != "") {
+        document.getElementById("welcome").innerHTML = "Welcome back, " + getCookieValue("nameCookie");
       }
     }
     </script>
@@ -130,6 +142,9 @@
       <div class="blocks" id="empDisplay">
         EMP = 3
       </div>
+    </div>
+    <div id="welcome">
+      Welcome
     </div>
     <div id="newstats">
       <script>
@@ -183,6 +198,11 @@
         if (empValue != "") {
           document.getElementById("empDisplay").innerHTML = "EMP = " + empValue;
           document.cookie = "empCookie=" + empValue;
+        }
+      let nameValue = document.getElementById("name").value;
+        if (nameValue != "") {
+          document.getElementById("welcome").innerHTML = "Welcome back, " + nameValue;
+          document.cookie = "nameCookie=" + nameValue;
         }
       //alert("Stats Updated");
       //return false;
