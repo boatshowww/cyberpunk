@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+
+      #nicole {
+        background-color: blue;
+        position: relative;
+        left: 30px;
+        right:auto;
+        max-width: 500px;
+        margin: auto;
+        border: 3px solid #73AD21;
+        float: right;
+        color: white;
+      }
+
+      #stats {
+        border: 3px solid #000000;
+        position: relative;
+        max-width: 500px;
+        margin: auto;
+        float: left;
+        margin-top:30px;
+      }
+      .blocks {
+        margin: 5px;
+        border: 3px solid #000;
+      }
+      #newstats {
+        position: relative;
+        max-width: 200px;
+        border: 3px solid #000000;
+        float: left;
+      }
+      #calc {
+        border: 3px solid #000000;
+        position: relative;
+        max-width: 500px;
+        margin: auto;
+        float: left;
+        margin-top:30px;
+        margin-left:50px;
+      }
+      .die {
+        margin: 5px;
+        border: 3px solid #000;
+      }
+      #dieValue {
+        font-size: 80px;
+        font-weight: bold;
+        padding-left: 400px;
+      }
+    </style>
+    <script>
+    function getCookieValue(name) {
+      let result = document.cookie.match("(^|[^;]+)\s*" + name + "\s*=\s*([^;]+)")
+      return result ? result.pop() : ""
+    }
+
+    function getCookie() {
+      if (getCookieValue("intCookie") != "") {
+        document.getElementById("intDisplay").innerHTML = "INT = " + getCookieValue("intCookie");
+      }
+      if (getCookieValue("refCookie") != "") {
+        document.getElementById("refDisplay").innerHTML = "REF = " + getCookieValue("refCookie");
+      }
+      if (getCookieValue("dexCookie") != "") {
+        document.getElementById("dexDisplay").innerHTML = "DEX = " + getCookieValue("dexCookie");
+      }
+      if (getCookieValue("techCookie") != "") {
+        document.getElementById("techDisplay").innerHTML = "TECH = " + getCookieValue("techCookie");
+      }
+      if (getCookieValue("coolCookie") != "") {
+        document.getElementById("coolDisplay").innerHTML = "COOL = " + getCookieValue("coolCookie");
+      }
+      if (getCookieValue("willCookie") != "") {
+        document.getElementById("willDisplay").innerHTML = "WILL = " + getCookieValue("willCookie");
+      }
+      if (getCookieValue("luckCookie") != "") {
+        document.getElementById("luckDisplay").innerHTML = "LUCK = " + getCookieValue("luckCookie");
+      }
+      if (getCookieValue("moveCookie") != "") {
+        document.getElementById("moveDisplay").innerHTML = "MOVE = " + getCookieValue("moveCookie");
+      }
+      if (getCookieValue("bodyCookie") != "") {
+        document.getElementById("bodyDisplay").innerHTML = "BODY = " + getCookieValue("bodyCookie");
+      }
+      if (getCookieValue("empCookie") != "") {
+        document.getElementById("empDisplay").innerHTML = "EMP = " + getCookieValue("empCookie");
+      }
+    }
+    </script>
+    <title>Cyberpunk Character Sheet</title>
+  </head>
+  <body onload="getCookie()">
+    <h1>Cyberpunk 2089</h1>
+    <div id="nicole">
+      this is Nicole's section
+    </div>
+    <div id="stats">
+      <div class="blocks" id="intDisplay">
+        INT = 3
+      </div>
+      <div class="blocks" id="refDisplay">
+        REF = 3
+      </div>
+      <div class="blocks" id="dexDisplay">
+        DEX = 3
+      </div>
+      <div class="blocks" id="techDisplay">
+        TECH = 3
+      </div>
+      <div class="blocks" id="coolDisplay">
+        COOL = 3
+      </div>
+      <div class="blocks" id="willDisplay">
+        WILL = 3
+      </div>
+      <div class="blocks" id="luckDisplay">
+        LUCK = 3
+      </div>
+      <div class="blocks" id="moveDisplay">
+        MOVE = 3
+      </div>
+      <div class="blocks" id="bodyDisplay">
+        BODY = 3
+      </div>
+      <div class="blocks" id="empDisplay">
+        EMP = 3
+      </div>
+    </div>
+    <div id="newstats">
+      <script>
+      function returnText(){
+      let intValue = document.getElementById("int").value;
+        if (intValue != "") {
+          document.getElementById("intDisplay").innerHTML = "INT = " + intValue;
+          document.cookie = "intCookie=" + intValue;
+        }
+      let refValue = document.getElementById("ref").value;
+        if (refValue != "") {
+          document.getElementById("refDisplay").innerHTML = "REF = " + refValue;
+          document.cookie = "refCookie=" + refValue;
+        }
+      let dexValue = document.getElementById("dex").value;
+        if (dexValue != "") {
+          document.getElementById("dexDisplay").innerHTML = "DEX = " + dexValue;
+          document.cookie = "dexCookie=" + dexValue;
+        }
+      let techValue = document.getElementById("tech").value;
+        if (techValue != "") {
+          document.getElementById("techDisplay").innerHTML = "TECH = " + techValue;
+          document.cookie = "techCookie=" + techValue;
+        }
+      let coolValue = document.getElementById("cool").value;
+        if (coolValue != "") {
+          document.getElementById("coolDisplay").innerHTML = "COOL = " + coolValue;
+          document.cookie = "coolCookie=" + coolValue;
+        }
+      let willValue = document.getElementById("will").value;
+        if (willValue != "") {
+          document.getElementById("willDisplay").innerHTML = "WILL = " + willValue;
+          document.cookie = "willCookie=" + willValue;
+        }
+      let luckValue = document.getElementById("luck").value;
+        if (luckValue != "") {
+          document.getElementById("luckDisplay").innerHTML = "LUCK = " + luckValue;
+          document.cookie = "luckCookie=" + luckValue;
+        }
+      let moveValue = document.getElementById("move").value;
+        if (moveValue != "") {
+          document.getElementById("moveDisplay").innerHTML = "MOVE = " + moveValue;
+          document.cookie = "moveCookie=" + moveValue;
+        }
+      let bodyValue = document.getElementById("body").value;
+        if (bodyValue != "") {
+          document.getElementById("bodyDisplay").innerHTML = "BODY = " + bodyValue;
+          document.cookie = "bodyCookie=" + bodyValue;
+        }
+      let empValue = document.getElementById("emp").value;
+        if (empValue != "") {
+          document.getElementById("empDisplay").innerHTML = "EMP = " + empValue;
+          document.cookie = "empCookie=" + empValue;
+        }
+      //alert("Stats Updated");
+      //return false;
+    }
+      </script>
+      <form onsubmit="return returnText()" action="insert2.php" method="post">
+        <label for="name">Character Name</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="int">Intelligence:</label><br>
+        <input type="text" id="int" name="int"><br>
+        <label for="ref">Reflex:</label><br>
+        <input type="text" id="ref" name="ref"><br>
+        <label for="dex">Dexterity:</label><br>
+        <input type="text" id="dex" name="dex"><br>
+        <label for="tech">Technique:</label><br>
+        <input type="text" id="tech" name="tech"><br>
+        <label for="cool">Cool:</label><br>
+        <input type="text" id="cool" name="cool"><br>
+        <label for="will">Willpower:</label><br>
+        <input type="text" id="will" name="will"><br>
+        <label for="luck">Luck:</label><br>
+        <input type="text" id="luck" name="luck"><br>
+        <label for="move">Move:</label><br>
+        <input type="text" id="move" name="move"><br>
+        <label for="body">Body:</label><br>
+        <input type="text" id="body" name="body"><br>
+        <label for="emp">Empathy:</label><br>
+        <input type="text" id="emp" name="emp"><br>
+        <input type="submit" value="Update">
+      </form>
+    </div>
+    <div class="die" id="calc">
+      <script>
+        function rollDice(arg) {
+          let dValue = 1 + Math.floor(Math.random()*arg)
+          document.getElementById("dieValue").innerHTML = dValue;
+          }
+      </script>
+      <div class="die">
+        <button type="button" onclick="rollDice(6)">D6</button>
+      </div>
+      <div class="die">
+        <button type="button" onclick="rollDice(10)">D10</button>
+      </div>
+      <div class="die">
+        <button type="button" onclick="rollDice(20)">D20</button>
+      </div>
+      <div class="die">
+        <button type="button" onclick="rollDice(100)">D100</button>
+      </div>
+    </div>
+    <div id="dieValue">
+    </div>
+</html>
