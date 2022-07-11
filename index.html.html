@@ -1,0 +1,148 @@
+<html>
+<head>
+  <link rel="stylesheet" href="newstyle.css">
+  <script type="text/javascript" src="scripts.js"></script>
+  <title>Cyberpunk Character Sheet</title>
+</head>
+<body onload="getCookie()">
+<div id="statButton">
+  <button onclick="statFunction('statBlock')">VIEW STATS</button>
+</div>
+<div id="statButtonForm">
+  <button onclick="statFunction('newstats')">UPDATE STATS</button>
+</div>
+<div id="statBlock">
+  <div class="statRow">
+    <div class="column column1">
+      INT
+    </div>
+    <div class="column column2" id="intDisplay">3</div>
+    <div class="column column3">
+      <button onclick="attributeRoll('intDisplay')">ROLL</button>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        REF
+      </div>
+      <div class="column column2" id="refDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('refDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        DEX
+      </div>
+      <div class="column column2" id="dexDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('dexDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        TECH
+      </div>
+      <div class="column column2" id="techDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('techDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        BAD
+      </div>
+      <div class="column column2" id="badDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('badDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        WILL
+      </div>
+      <div class="column column2" id="willDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('willDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        LUCK
+      </div>
+      <div class="column column2" id="luckDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('luckDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        MOVE
+      </div>
+      <div class="column column2" id="moveDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('moveDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+  <div id="statBlock">
+    <div class="statRow">
+      <div class="column column1">
+        BODY
+      </div>
+      <div class="column column2" id="bodyDisplay">3</div>
+      <div class="column column3">
+        <button onclick="attributeRoll('bodyDisplay')">ROLL</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="newstats">
+  <form>
+    <label for="name">Character Name</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="int">Intelligence:</label><br>
+    <input type="text" id="int" name="int"><br>
+    <label for="ref">Reflex:</label><br>
+    <input type="text" id="ref" name="ref"><br>
+    <label for="dex">Dexterity:</label><br>
+    <input type="text" id="dex" name="dex"><br>
+    <label for="tech">Technique:</label><br>
+    <input type="text" id="tech" name="tech"><br>
+    <label for="bad">Badass:</label><br>
+    <input type="text" id="bad" name="bad"><br>
+    <label for="will">Willpower:</label><br>
+    <input type="text" id="will" name="will"><br>
+    <label for="luck">Luck:</label><br>
+    <input type="text" id="luck" name="luck"><br>
+    <label for="move">Move:</label><br>
+    <input type="text" id="move" name="move"><br>
+    <label for="body">Body:</label><br>
+    <input type="text" id="body" name="body"><br>
+    <input type="button" value="Update" onclick="return returnText()">
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
