@@ -4,6 +4,12 @@
   margin: 0px;
 }
 
+.statRowRight {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
 .column {
   width: 35px;
   margin: 0px;
@@ -16,6 +22,11 @@
   align-content: center;
 }
 
+.column1R {
+  width: 150px;
+  align-content: center;
+}
+
 .column2 {
   width: 15px;
   align-content: center;
@@ -25,6 +36,23 @@
   width: 55px;
 }
 
+.dice {
+  max-width: 500px
+}
+
+.die {
+  float: right;
+}
+
+.aboveFold {
+  max-width: 1000px
+}
+
+.statBlockRight {
+  display: block;
+  float: right;
+}
+
 #button {
   margin: 20px;
   margin-bottom: 30px;
@@ -32,4 +60,17 @@
 
 #statBlock {
   display: block;
+}
+
+#dieValue {
+  font-size: 80px;
+  font-weight: bold;
+  border-style: double;
+  border-width: medium;
+  border-color: #dfdfdf;
+  float: right;
+}
+
+#skillButton {
+  float: right;
 }

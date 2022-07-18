@@ -114,12 +114,86 @@ function attributeRoll(attributeId) {
   let intInt = parseInt(attInt)
   let statValue = 1 + Math.floor(Math.random()*10) + intInt;
   console.log(statValue);
+  document.getElementById("dieValue").innerHTML = statValue;
 /*  let dieStr = rollDice(10);
   console.log(dieStr);
   let dieInt = parseInt(dieStr, 10);
   let attValue = dieInt + intParse;
   document.getElementById("dieValue").innerHTML = subInt; */
 }
+
+function intelligenceSkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("intDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
+function willpowerSkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("willDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
+function reflexSkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("refDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
+function dexteritySkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("dexDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
+function technologySkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("techDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
+function badassSkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("badDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
+function willpowerSkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("willDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
+function bodySkillRoll(skillId) {
+  let skillInt = document.getElementById(skillId).innerText;
+  let attInt = document.getElementById("bodyDisplay").innerText;
+  let integerSkill = parseInt(skillInt);
+  let integerAtt = parseInt(attInt);
+  let rollValue = 1 + Math.floor(Math.random()*10) + integerSkill + integerAtt;
+  document.getElementById("dieValue").innerHTML = rollValue;
+}
+
 
 function statFunction(blockId) {
   var x = document.getElementById(blockId);
@@ -129,3 +203,186 @@ function statFunction(blockId) {
     x.style.display = "none";
   }
 }
+
+function setLocal() {
+  let concValue = document.getElementById("concentration").value;
+    if (concValue != "") {
+      localStorage.setItem("concentration", concValue);
+    }
+  let concealValue = document.getElementById("conceal").value;
+    if (concValue != "") {
+      localStorage.setItem("conceal", concealValue);
+    }
+  let lipValue = document.getElementById("lip-reading").value;
+    if (lipValue != "") {
+      localStorage.setItem("lip-reading", lipValue);
+    }
+  let percValue = document.getElementById("perception").value;
+    if (percValue != "") {
+      localStorage.setItem("perception", percValue);
+    }
+  let trackValue = document.getElementById("tracking").value;
+    if (trackValue != "") {
+      localStorage.setItem("tracking", trackValue);
+    }
+  let athValue = document.getElementById("athletics").value;
+    if (athValue != "") {
+      localStorage.setItem("athletics", athValue);
+    }
+  let contValue = document.getElementById("contortionist").value;
+    if (contValue != "") {
+      localStorage.setItem("contortionist", contValue);
+    }
+  let danceValue = document.getElementById("dance").value;
+    if (danceValue != "") {
+      localStorage.setItem("dance", danceValue);
+    }
+  let endValue = document.getElementById("endurance").value;
+    if (endValue != "") {
+      localStorage.setItem("endurance", endValue);
+    }
+  let restValue = document.getElementById("resist-torture").value;
+    if (restValue != "") {
+      localStorage.setItem("resist-torture", restValue);
+    }
+  let stealthValue = document.getElementById("stealth").value;
+    if (stealthValue != "") {
+      localStorage.setItem("stealth", stealthValue);
+    }
+  let pilotValue = document.getElementById("piloting").value;
+    if (pilotValue != "") {
+      localStorage.setItem("piloting", pilotValue);
+    }
+  let accountingValue = document.getElementById("accounting").value;
+    if (accountingValue != "") {
+      localStorage.setItem("accounting", accountingValue);
+    }
+  let animalValue = document.getElementById("animal-handling").value;
+    if (animalValue != "") {
+      localStorage.setItem("animal-handling", animalValue);
+    }
+  let cookValue = document.getElementById("cooking").value;
+    if (cookValue != "") {
+      localStorage.setItem("cooking", cookValue);
+    }
+  let businessValue = document.getElementById("business").value;
+    if (businessValue != "") {
+      localStorage.setItem("business", businessValue);
+    }
+  let compositionValue = document.getElementById("composition").value;
+    if (compositionValue != "") {
+      localStorage.setItem("composition", compositionValue);
+    }
+  let deductionValue = document.getElementById("deduction").value;
+    if (deductionValue != "") {
+      localStorage.setItem("deduction", deductionValue);
+    }
+  let educationValue = document.getElementById("education").value;
+    if (educationValue != "") {
+      localStorage.setItem("education", educationValue);
+    }
+  let gamblingValue = document.getElementById("gambling").value;
+    if (gamblingValue != "") {
+      localStorage.setItem("gambling", gamblingValue);
+    }
+  let languageValue = document.getElementById("language").value;
+    if (languageValue != "") {
+      localStorage.setItem("language", languageValue);
+    }
+  let researchValue = document.getElementById("research").value;
+    if (researchValue != "") {
+      localStorage.setItem("research", researchValue);
+    }
+  let localValue = document.getElementById("local-expert").value;
+    if (localValue != "") {
+      localStorage.setItem("local-expert", localValue);
+    }
+  let scienceValue = document.getElementById("science").value;
+    if (scienceValue != "") {
+      localStorage.setItem("science", scienceValue);
+    }
+  let tacticsValue = document.getElementById("tactics").value;
+    if (tacticsValue != "") {
+      localStorage.setItem("tactics", tacticsValue);
+    }
+  let survivalValue = document.getElementById("survival").value;
+    if (survivalValue != "") {
+      localStorage.setItem("survival", survivalValue);
+    }
+  let brawlingValue = document.getElementById("brawling").value;
+    if (brawlingValue != "") {
+      localStorage.setItem("brawling", brawlingValue);
+    }
+  let evasionValue = document.getElementById("evasion").value;
+    if (evasionValue != "") {
+      localStorage.setItem("evasion", evasionValue);
+    }
+  let meleeValue = document.getElementById("melee").value;
+    if (meleeValue != "") {
+      localStorage.setItem("melee", meleeValue);
+    }
+  let actValue = document.getElementById("acting").value;
+    if (actValue != "") {
+      localStorage.setItem("acting", actValue);
+    }
+  let instrumentValue = document.getElementById("instrument").value;
+    if (instrumentValue != "") {
+      localStorage.setItem("instrument", instrumentValue);
+    }
+  let archeryValue = document.getElementById("archery").value;
+    if (archeryValue != "") {
+      localStorage.setItem("archery", archeryValue);
+    }
+  let pistolsValue = document.getElementById("pistols").value;
+    if (pistolsValue != "") {
+      localStorage.setItem("pistols", pistolsValue);
+    }
+  let riflesValue = document.getElementById("rifles").value;
+    if (riflesValue != "") {
+      localStorage.setItem("rifles", riflesValue);
+    }
+  let explosivesValue = document.getElementById("explosives").value;
+    if (explosivesValue != "") {
+      localStorage.setItem("explosives", explosivesValue);
+    }
+  let charismaValue = document.getElementById("charisma").value;
+    if (charismaValue != "") {
+      localStorage.setItem("charisma", charismaValue);
+    }
+  let empathyValue = document.getElementById("empathy").value;
+    if (empathyValue != "") {
+      localStorage.setItem("empathy", empathyValue);
+    }
+  let interrogationValue = document.getElementById("interrogation").value;
+    if (interrogationValue != "") {
+      localStorage.setItem("interrogation", interrogationValue);
+    }
+  let persuasionValue = document.getElementById("persuasion").value;
+    if (persuasionValue != "") {
+      localStorage.setItem("persuasion", persuasionValue);
+    }
+  let styleValue = document.getElementById("style").value;
+    if (styleValue != "") {
+      localStorage.setItem("style", styleValue);
+    }
+  let seawiseValue = document.getElementById("seawise").value;
+    if (seawiseValue != "") {
+      localStorage.setItem("seawise", seawiseValue);
+    }
+  let medicineValue = document.getElementById("medicine").value;
+    if (medicineValue != "") {
+      localStorage.setItem("medicine", medicineValue);
+    }
+  let theftValue = document.getElementById("theft").value;
+    if (theftValue != "") {
+      localStorage.setItem("theft", theftValue);
+    }
+  let carpentryValue = document.getElementById("carpentry").value;
+    if (carpentryValue != "") {
+      localStorage.setItem("carpentry", carpentryValue);
+    }
+  let techsmithValue = document.getElementById("techsmith").value;
+    if (techsmithValue != "") {
+      localStorage.setItem("techsmith", techsmithValue);
+    }
+  }
