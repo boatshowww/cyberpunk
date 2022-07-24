@@ -195,8 +195,8 @@ function bodySkillRoll(skillId) {
 }
 
 
-function statFunction(blockId) {
-  var x = document.getElementById(blockId);
+function statFunction(blockId, buttonId) {
+  let x = document.getElementById(blockId);
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {

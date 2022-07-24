@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="newstyle.css">
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>Combat</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html">Character</a>
+      <div class="header-right">
+        <a href="inventory.html">Inventory</a>
+        <a href="skills.html">Skills</a>
+        <a href="combat.html">Combat</a>
+      </div>
+    </div>
+      <div><h1>Combat</h1><div>
+        <div id="statBlock">
+          <div class="statRow">
+            <div class="column equippedItem">Equipped Weapon</div>
+            <div class="column attackButton" >Attack</div>
+            <div class="column damageButton">Damage</div>
+          </div>
+          <div class="statRow">
+            <div class="column equippedItem">Pissy Pistol</div>
+            <div class="column attackButton" ><button>HIT ROLL</button></div>
+            <div class="column damageButton"><button>DAMAGE ROLL</button></div>
+          </div>
+        </div>
+        <div id="dieValue">
+          ##
+        </div>
+        <div class="dice">
+          <div class="die">
+            <button type="button" onclick="rollDice(6)">D6</button>
+          </div>
+          <div class="die">
+            <button type="button" onclick="rollDice(10)">D10</button>
+          </div>
+          <div class="die">
+            <button type="button" onclick="rollDice(20)">D20</button>
+          </div>
+          <div class="die">
+            <button type="button" onclick="rollDice(100)">D100</button>
+          </div>
+        </div>
+
+  </body>
+</html>
