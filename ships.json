@@ -1,0 +1,74 @@
+{
+"ships": [
+  {
+    "class": "sloop",
+    "rangeDifficulty": 17,
+    "speed": 12,
+    "turnRadius": 45,
+    "minCrew": 5,
+    "maxCrew": 100,
+    "maxCannon": 24,
+    "carryCapacity": 250
+  },
+  {
+    "class": "schooner",
+    "rangeDifficulty": 16,
+    "speed": 11,
+    "turnRadius": 45,
+    "minCrew": 15,
+    "maxCrew": 200,
+    "maxCannon": 32,
+    "carryCapacity": 350
+  },
+  {
+    "class": "frigate",
+    "rangeDifficulty": 15,
+    "speed": 10,
+    "turnRadius": 45,
+    "minCrew": 20,
+    "maxCrew": 250,
+    "maxCannon": 40,
+    "carryCapacity": 450
+  },
+  {
+    "class": "galleon",
+    "rangeDifficulty": 13,
+    "speed": 8,
+    "turnRadius": 40,
+    "minCrew": 50,
+    "maxCrew": 400,
+    "maxCannon": 50,
+    "carryCapacity": 600
+  },
+  {
+    "class": "manowar",
+    "rangeDifficulty": 14,
+    "speed": 9,
+    "turnRadius": 45,
+    "minCrew": 75,
+    "maxCrew": 300,
+    "maxCannon": 60,
+    "carryCapacity": 450
+  }
+],
+"guns": [
+  {
+  "class":"9pounder",
+  "maxRange":1000,
+  "avgRange":749,
+  "closeRange":499,
+  "blankRange":249
+},
+{
+  "class":"chainShot",
+  "maxRange":250,
+  "avgRange":149,
+  "closeRange":99,
+  "blankRange":49
+},
+{
+  "class":"grapeShot",
+  "maxRange":150
+}
+]
+}

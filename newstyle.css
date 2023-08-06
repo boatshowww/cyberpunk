@@ -1,3 +1,4 @@
+
 .statRow {
   display: flex;
   flex-direction: row;
@@ -18,26 +19,28 @@
 }
 
 .column1 {
-  width: 50px;
+  width: 175px;
   align-content: center;
 }
 
 .column1R {
-  width: 150px;
+  width: 175px;
   align-content: center;
 }
 
 .column2 {
-  width: 15px;
+  width: 25px;
   align-content: center;
 }
 
 .column3 {
-  width: 55px;
+  width: 60px;
 }
 
 .dice {
-  max-width: 500px
+  max-width: 500px;
+  display: flex;
+  
 }
 
 .die {
@@ -54,6 +57,10 @@
 }
 
 .internalButton {
+  float: right;
+}
+
+.floatright {
   float: right;
 }
 
@@ -164,7 +171,7 @@
 }
 
 .damageButton {
-  width: 75px;
+  width: 95px;
 }
 
 #newstats {
@@ -180,8 +187,8 @@
   display: block;
 }
 
-#dieValue {
-  font-size: 80px;
+.dieValue {
+  font-size: 60px;
   font-weight: bold;
   border-style: double;
   border-width: medium;

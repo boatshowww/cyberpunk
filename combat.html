@@ -1,7 +1,12 @@
 <html>
   <head>
-    <link rel="stylesheet" href="newstyle.css">
-    <script type="text/javascript" src="scripts.js"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="newstyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <title>Combat</title>
   </head>
-  <body>
+  <body onload="popHp()">
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZCM3B9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -19,41 +24,112 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="header">
       <a href="index.html">Character</a>
       <div class="header-right">
-        <a href="inventory.html">Inventory</a>
+<!--        <a href="inventory.html">Inventory</a> -->
         <a href="skills.html">Skills</a>
         <a href="combat.html">Combat</a>
       </div>
     </div>
-      <div><h1>Combat</h1><div>
+    <div class="container-fluid">
+        <div class="rolling floatright row">
+             <p class="col-lg-2">Roll Total:</p>
+              <div class="dieValue col-lg-2" id="rawValue">##</div><br><br>
+               <p class="col-lg-2">Crit Opportunity:</p>
+               <div class="dieValue col-lg-2" id="dieValue">##</div>
+  
+                 <div class="dice floatright btn-group">
+      
+                  <button class="btn-primary" type="button" onclick="rollDice(6)">D6</button>
+      
+      
+                   <button class="btn-primary" type="button" onclick="rollDice(10)">D10</button>
+      
+      
+                   <button class="btn-primary" type="button" onclick="rollDice(20)">D20</button>
+      
+      
+                   <button class="btn-primary" type="button" onclick="rollDice(100)">D100</button>
+      
+                </div>
+                <div>
+                  <form>
+                    <label for="hp">HP</label><br>
+                    <input type="number" id="hp" name="hp">
+                  </form>
+                </div>
+          </div>
+      <div><h1>Melee Combat</h1></div>
         <div id="statBlock">
           <div class="statRow">
-            <div class="column equippedItem">Equipped Weapon</div>
-            <div class="column attackButton" >Attack</div>
-            <div class="column damageButton">Damage</div>
+            <div class="column equippedItem"><b>Equipped Weapon</b></div>
+            <div class="column attackButton" ><b>Attack</b></div>
+            <div class="column damageButton"><b>Damage</b></div>
           </div>
           <div class="statRow">
-            <div class="column equippedItem">Pissy Pistol</div>
-            <div class="column attackButton" ><button>HIT ROLL</button></div>
-            <div class="column damageButton"><button>DAMAGE ROLL</button></div>
+            <div class="column equippedItem">Pistol</div>
+            <div class="column attackButton" ><button onclick="combatRoll('reflex', 'pistols')">HIT ROLL</button></div>
+            <div class="column damageButton"><button onclick="dmgRoll(4)">DAMAGE ROLL</button></div>
           </div>
-        </div>
-        <div id="dieValue">
-          ##
-        </div>
-        <div class="dice">
-          <div class="die">
-            <button type="button" onclick="rollDice(6)">D6</button>
+          <div class="statRow">
+            <div class="column equippedItem">Musket</div>
+            <div class="column attackButton" ><button onclick="combatRoll('reflex', 'rifles')">HIT ROLL</button></div>
+            <div class="column damageButton"><button onclick="dmgRoll(4)">DAMAGE ROLL</button></div>
           </div>
-          <div class="die">
-            <button type="button" onclick="rollDice(10)">D10</button>
+          <div class="statRow">
+            <div class="column equippedItem">Grenade</div>
+            <div class="column attackButton" ><button onclick="combatRoll('reflex', 'explosives')">HIT ROLL</button></div>
+            <div class="column damageButton"><button onclick="dmgRoll(5)">DAMAGE ROLL</button></div>
           </div>
-          <div class="die">
-            <button type="button" onclick="rollDice(20)">D20</button>
+          <div class="statRow">
+            <div class="column equippedItem">Dagger</div>
+            <div class="column attackButton" ><button onclick="combatRoll('dexterity', 'melee')">HIT ROLL</button></div>
+            <div class="column damageButton"><button onclick="dmgRoll(2)">DAMAGE ROLL</button></div>
           </div>
-          <div class="die">
-            <button type="button" onclick="rollDice(100)">D100</button>
+          <div class="statRow">
+            <div class="column equippedItem">Cutlass</div>
+            <div class="column attackButton" ><button onclick="combatRoll('dexterity', 'melee')">HIT ROLL</button></div>
+            <div class="column damageButton"><button onclick="dmgRoll(3)">DAMAGE ROLL</button></div>
+          </div>
+          <div class="statRow">
+            <div class="column equippedItem">Boarding Axe</div>
+            <div class="column attackButton" ><button onclick="combatRoll('body', 'melee')">HIT ROLL</button></div>
+            <div class="column damageButton"><button onclick="dmgRoll(4)">DAMAGE ROLL</button></div>
           </div>
         </div>
 
+       
+        <h1>Naval Combat</h1>
+        <div class="rolling floatright row">
+          <p class="col-lg-2">Cannonballs Hit:</p>
+          <div class="dieValue col-lg-2" id="hitCountTotal">##</div><br><br>
+          <p class="col-lg-2">Damage:</p>
+          <div class="dieValue col-lg-2" id="cannonDamage">##</div>
+          <div>
+            <form>
+              <label for="shp">Ship HP</label><br>
+              <input type="number" id="shp" name="shp">
+            </form>
+          </div>
+        </div>
+        <form>
+          <label for="noCan"># of Cannons fired</label><br>
+          <input type="number" id="noCan" name="noCan"><br>
+          <label for="difficulty">Difficulty</label><br>
+          <input type="number" id="difficulty" name="difficulty"><br>
+          <input type="button" value="FIRE!" onclick="cannonBarrage()">
+        </form>
+
+        <form>
+          <label for="target">Targeted Area</label>
+          <select id="target" name="target">
+            <option value="hull">Hull</option>
+            <option value="masts">Masts</option>
+          </select><br>
+          <label for="ammo">Ammunition</label><br>
+          <select id="ammo" name="ammo">
+            <option value="9pounder">9 Pounders</option>
+            <option value="chainShot">Chain Shot</option>
+          <input type="button" value="Calculate" onclick="barrageDamage()">
+        </form>
+        </div>
   </body>
 </html>
